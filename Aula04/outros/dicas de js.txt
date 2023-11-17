@@ -1,0 +1,4 @@
+Algumas dicas de JS:
+Alt + Shift + F -> Seu código é indentado automaticamente
+Alt + Shift + Seta -> Copia uma linha de código para baixo
+Ao digitar "link", você cria um link para algum código que fica separado

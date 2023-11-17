@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Sistema multatório</h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel">km/h
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+        function calcular() {
+            var txtvel = document.querySelector('input#txtvel')
+            var res = document.querySelector('div#res')
+            var vel = Number(txtvel.value) // Conversão de valor
+            res.innerHTML = `<p>Sua velocidade é de <strong>${vel}km/h</strong></p>`
+            if (vel > 60) {
+                res.innerHTML += `<p>Você foi <strong>MULTADO</strong> por excesso de velocidade!</p>` // esse += é usado para concatenar
+            } else {
+                res.innerHTML += `<p>Você não foi multado por excesso de velocidade!</p>`
+            }
+            res.innerHTML += `<p>Dirija sempre com o cinto de segurança!</p>`
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

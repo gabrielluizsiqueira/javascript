@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Verificação de nacionalidade</h1>
+    Seu país de origem:<input type="text" name="pais" id="pais"> <!-- Input de DIGITAR-->
+    <input type="button" value="Verificar" onclick="clicar()"> <!-- Input BOTÃO-->
+    <div id="res"> <!-- RESULTADO -->
+
+    </div>
+    <script>
+        function clicar(){
+            var pais = window.document.querySelector('input#pais')
+            var res = window.document.querySelector('div#res')
+            var pais = String(pais.value) // aparentemente, o input não tem valor específico, por isso tem que especificar
+            res.innerHTML = `<p>Seu país de origem é <strong>${pais}</strong></p>`//aqui, você está modificando a div 'res'
+            if (pais == 'brasil'){
+                res.innerHTML += `<p>Você é brasileiro</p>` //Se a condição for verdadeira, será executada a ação
+            }else{
+                res.innerHTML += `<p>Você é estrangeiro!</p>`//Se não, será executada outra
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body{
+            color: rgb(255, 255, 255);
+            background-color: rgb(23, 116, 202);
+            font: normal 16pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div class="msg">Clique em mim pfv</div><br/>
+    <script>
+        var corpo = document.body
+        var p1 = document.getElementsByTagName('p')[1]
+
+      //  corpo.style.backgroundColor = ''
+      //  window.document.write('Está escrito assim: '+ p1.innerHTML + '<br/>')// innerHTML usa a formatação, innerText usa apenas o texto
+      //  p1.style.color = 'blue'
+
+        /*var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        document.write(d.innerText)
+        d.innerText = 'Estou aqui'
+        */
+
+        var d = window.document.querySelector('div.msg')
+        d.style.background = 'green'
+
+    </script>
+</body>
+</html>
